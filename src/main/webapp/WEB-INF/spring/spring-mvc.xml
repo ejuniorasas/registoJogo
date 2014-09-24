@@ -11,7 +11,7 @@
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/protected/**"/>
-            <bean class="br.com.empa.app.interceptor.LoginInterceptor"/>
+            <bean class="br.com.emporiodaarte.interceptor.LoginInterceptor"/>
         </mvc:interceptor>
         <!-- workaround to fix IE8 problem -->
         <bean id="webContentInterceptor"
