@@ -36,6 +36,9 @@ public class Jogador implements Serializable {
 	@Column(name="status_jogador")
 	private String statusJogador;
 
+	@Column(name="perfil")
+	private String perfil;
+
 	//bi-directional many-to-one association to Grupo
 	@OneToMany(mappedBy="jogador")
 	private List<Grupo> grupos;
@@ -101,6 +104,15 @@ public class Jogador implements Serializable {
 
 	public void setStatusJogador(String statusJogador) {
 		this.statusJogador = statusJogador;
+	}
+
+	
+	public String getPerfil() {
+		return perfil;
+	}
+
+	public void setPerfil(String perfil) {
+		this.perfil = perfil;
 	}
 
 	public List<Grupo> getGrupos() {
