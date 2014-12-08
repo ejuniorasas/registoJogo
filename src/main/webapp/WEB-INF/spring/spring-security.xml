@@ -21,8 +21,8 @@
         <security:authentication-provider>
             <security:jdbc-user-service
                     data-source-ref="dsRegistroJogo"
-                    users-by-username-query="select email, password, enabled from system_user where email = ?"
-                    authorities-by-username-query="select u.email as login, u.user_role as role from system_user u where u.email = ?" />
+                    users-by-username-query="select email_jogador, senha_jogador, status_jogador from jogador where email_jogador = ?"
+                    authorities-by-username-query="select u.email_jogador as login, u.perfil as role from jogador u where u.email_jogador = ?" />
         </security:authentication-provider>
     </security:authentication-manager>
 </beans>
