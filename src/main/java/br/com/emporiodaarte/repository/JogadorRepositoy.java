@@ -6,4 +6,5 @@ import br.com.emporiodaarte.model.Jogador;
 
 public interface JogadorRepositoy extends CrudRepository<Jogador, Integer>{
 
+	public Jogador findByEmailJogador(String email);
 }
